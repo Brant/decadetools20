@@ -13,6 +13,13 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/Brant/decadetools20",
     packages=find_packages(),
+    include_package_data=True,  # This is important for including non-Python files
+    package_data={
+        'decadetools20': [
+            'static/decadetools20/css/*',
+            'static/decadetools20/js/*',
+        ],
+    },
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
